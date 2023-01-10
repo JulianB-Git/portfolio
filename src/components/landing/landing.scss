@@ -1,0 +1,185 @@
+.landing {
+    height: 100vh;
+    background: url("../../img/light-new.svg") no-repeat center center;
+    // opacity: 0.5;
+    background-size: cover;
+    // #297EA6
+
+    .navbar{
+        display: flex;
+        padding: 5px 10px;
+        height: 40px;
+
+        .logo{
+            // flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icons{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            // justify-self: center;
+            // align-self: center;
+
+            a{
+                text-decoration: none;
+                color: black;
+                // width: 50px;
+            }
+
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .settings{
+            // flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .content{
+        display: flex;
+        height: calc(100vh - 50px);
+
+        .left{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+    
+            .wrapper{
+                padding: 50px;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+
+                @media screen and (max-width: 480px) {
+                    padding: 10px;
+                }
+    
+                .heading{
+                    font-size: 30px;
+                    font-weight: 300;
+                }
+    
+                .name{
+                    font-size: 60px;
+                }
+
+                p{
+                    @media screen and (max-width: 480px) {
+                        display: none;
+                    }
+                }
+    
+                .title{
+                    height: 50px;
+                    overflow: hidden;
+    
+                    .title-wrapper{
+                        height: 100%;
+                        animation: move 10s ease-in-out infinite alternate;
+
+    
+                        @keyframes move {
+                            50%{
+                                transform: translateY(-50px);
+                            }
+                            50%{
+                                transform: translateY(-100px);
+                            }
+                        }
+    
+                        .title-item{
+                            height: 50px;
+                            font-size: 30px;
+                            font-weight: bold;
+                            color: #59b256;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            flex: 1;
+
+                            @media screen and (max-width: 480px) {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .right{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+
+            // position: relative;
+    
+            // svg{
+            //     width: 50%;
+            //     height: 70%;
+            //     position: absolute;
+            //     // top: 0;
+            //     // right: 0;
+            // }
+
+            .item{
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                // flex-direction: column;
+                width: 60%;
+                height: 65%;
+                
+
+                img{
+                    width: 100%;
+                    
+                    // height: 400px;
+                    // mask-position: center;
+                    justify-self: center;
+                    align-self: center;
+                    
+                    // object-fit: cover;
+                    mask-repeat: no-repeat;
+                    mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMTguNywtMjEuOEMyNS43LC0xNi40LDMzLjksLTExLjksMzgsLTQuNEM0MiwzLjEsNDEuOSwxMy42LDM2LDE4LjFDMzAuMiwyMi43LDE4LjcsMjEuMywxMC4zLDIxLjRDMS44LDIxLjUsLTMuNiwyMy4xLC0xMC4zLDIzQy0xNywyMi45LC0yNS4xLDIxLC0yNy45LDE2LjFDLTMwLjcsMTEuMiwtMjguMiwzLjMsLTI3LjcsLTUuN0MtMjcuMSwtMTQuOCwtMjguNCwtMjUuMSwtMjQuMSwtMzAuOUMtMTkuOCwtMzYuOCwtOS45LC0zOC4zLC0yLC0zNS45QzUuOCwtMzMuNSwxMS43LC0yNy4yLDE4LjcsLTIxLjhaIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MCA1MCkiIHN0cm9rZS13aWR0aD0iMCIgc3R5bGU9InRyYW5zaXRpb246IGFsbCAwLjNzIGVhc2UgMHM7IiBzdHJva2U9InVybCgjc3ctZ3JhZGllbnQpIj48L3BhdGg+CiAgICAgICAgICAgICAgPC9zdmc+);
+                }
+            }
+
+            // .image{
+            //     // width: 50%;
+            //     // height: 50%;
+            //     object-fit: fill;
+            //     position: absolute;
+            //     top: 100px;
+            //     // right: 1;
+            //     bottom: 3px;
+
+            // }
+        }
+    }
+}
