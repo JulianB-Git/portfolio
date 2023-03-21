@@ -166,7 +166,7 @@ const ContactForm = () => {
                 }}
               />
               <h3 className="card-title">Location</h3>
-              <span className="card-data">Windhoek, Namibia</span>
+              <span className="card-data">England, United Kingdom</span>
             </div>
           </div>
         </div>
