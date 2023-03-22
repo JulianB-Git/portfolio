@@ -147,7 +147,7 @@ const ContactForm = () => {
                 }}
               />
               <h3 className="card-title">Phone number</h3>
-              <span className="card-data">+264 81 654 7713</span>
+              <span className="card-data">+44 794392 5516</span>
             </div>
 
             <div
